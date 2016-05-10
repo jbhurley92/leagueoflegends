@@ -1,0 +1,14 @@
+{
+  "name": "lolwrapper",
+  "version": "1.0.0",
+  "description": "package for capstone project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lolwrapper"
+  ],
+  "author": "Jacob Hurley jbhurley92@gmail.com",
+  "license": "ISC"
+}
