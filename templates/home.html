@@ -1,9 +1,16 @@
 <!doctype html>
 <div id="home">
    <h2>Summoner</h2>
-	 <form ng-submit="searchSummoner()">
+	 <form ng-submit="searchSummoner(summoner)">
 			 <input type="text" ng-model="summonerText" placeholder="Summoner Name">
 			 <input class="button-submit" id ="summonerBox" type="submit" value="search">
+			 <div ng-repeat="match in matches | limitTo: 10">
+				 <p>{{match.queue}}</p>
+				 <p>{{match.champion}}</p>
+				 <p>{{match.lane}}</p>
+
+
+			 </div>
 	 </form>
 			<div>
 
