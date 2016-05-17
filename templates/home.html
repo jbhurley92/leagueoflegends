@@ -4,9 +4,10 @@
 	 <form ng-submit="searchSummoner(summoner)">
 			 <input type="text" id="summonerInput" ng-model="summonerText" placeholder="Summoner Name">
 			 <input class="button-submit" id="summonerBox" type="submit" value="search">
+
 			 <div id="information" ng-repeat="match in matches | limitTo: 10">
-				 <p>{{match.queue}}</p>
-				 <p>{{match.champion}}</p>
+				 <p>{{champions[match.championId]}}</p>
+				 <p>{{match.subType}}</p>
 				 <p>{{match.lane}}</p>
 
 
