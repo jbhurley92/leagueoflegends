@@ -6,27 +6,25 @@
 			 <input class="button-submit" id="summonerBox" type="submit" value="search">
 
 			 <div id="information" ng-repeat="match in matches | limitTo: 10">
-			<img	src ="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/{{ champions[match.championId]}}.png"  />
-			<img src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item0}}.png"/>
-			<img src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item1}}.png"/>
-			<img src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item2}}.png"/>
-			<img src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item3}}.png"/>
-			<img src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item4}}.png"/>
-			<img src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item5}}.png"/>
-			<img src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item6}}.png"/>
+			<img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/{{ champions[match.championId]}}.png"  />
+			<img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item0}}.png"/>
+			<img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item1}}.png"/>
+			<img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item2}}.png"/>
+			<img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item3}}.png"/>
+			<img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item4}}.png"/>
+			<img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item5}}.png"/>
+			<img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item6}}.png"/>
+			<div ng-class="{'winBg': match.stats.win, 'loseBg': !match.stats.win}">
 				 <p>{{champions[match.championId]}}</p>
 				 <p>{{match.subType}}</p>
 				 <p>{{match.lane}}</p>
 				 <p>{{match.stats.championsKilled}} Kills </p>
 				 <p>{{match.stats.numDeaths}} Deaths </p>
 				 <p>{{match.stats.assists}} Assists </p>
-				 <p>{{match.stats.win}}</p>
-				 
-
-
 			 </div>
-	 </form>
-			<div>
 
-      </div>
+
+			</div>
+
+	</form>
 </div>

@@ -1,5 +1,5 @@
 #information{
-	background-color: #CCFFFF;
+	background-color: CCFFFF;
 	border: groove;
 	}
 
@@ -12,4 +12,10 @@
 	width:200px;
 	height: 20px;
 	background-color: white;
+}
+.winBg{
+	background-color: green;
+}
+.loseBg{
+  background-color: red;
 }
