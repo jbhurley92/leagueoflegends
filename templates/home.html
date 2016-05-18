@@ -6,7 +6,7 @@
 			 <input class="button-submit" id="summonerBox" type="submit" value="search">
 
 			<div id="information" ng-repeat="match in matches | limitTo: 10">
-			<div ng-class="{'winBg': match.stats.win, 'loseBg': !match.stats.win}">
+			<div id="wrapper" ng-class="{'winBg': match.stats.win, 'loseBg': !match.stats.win}">
 				<img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/{{ champions[match.championId]}}.png"  />
 			<ul>
 				<li id="itemList1">
