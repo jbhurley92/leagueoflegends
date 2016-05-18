@@ -1,48 +1,50 @@
 <!doctype html>
 <div id="home">
-   <h2>Summoner</h2>
-	 <form ng-submit="searchSummoner(summoner)">
-			 <input type="text" id="summonerInput" ng-model="summonerText" placeholder="Summoner Name">
-			 <input class="button-submit" id="summonerBox" type="submit" value="search">
+	<form ng-submit="searchSummoner(summoner)">
+		<input type="text" id="summonerInput" ng-model="summonerText" placeholder="Summoner Name">
+		<input class="button-submit" id="summonerBox" type="submit" value="search">
 
-			<div id="information" ng-repeat="match in matches | limitTo: 10">
+		<div id="information" ng-repeat="match in matches | limitTo: 10">
 			<div id="wrapper" ng-class="{'winBg': match.stats.win, 'loseBg': !match.stats.win}">
-				<img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/{{ champions[match.championId]}}.png"  />
-			<ul>
-				<li id="itemList1">
-					<img height="34" width ="34" ng-src=  "http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item0}}.png"/>
-					<img height="34" width ="34" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item1}}.png"/>
-					<img height="34" width ="34" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item2}}.png"/>
-				</li>
-			</ul>
-			<ul>
-				<li id="itemlist2">
-					<img height="34" width ="34" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item3}}.png"/>
-					<img height="34" width ="34" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item4}}.png"/>
-					<img height="34" width ="34" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item5}}.png"/>
-					<img height="34" width ="34" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item6}}.png"/>
-				</li>
-				<p>{{champions[match.championId]}}</p>
-			</ul>
-			<ul id="gameType">
-				<li>{{match.subType}}</li>
-				<li>{{match.lane}}</li>
-			</ul>
-				<ul id="summonerGame">
-				 	<li>{{match.stats.championsKilled}} Kills </li>
-				 	<li>{{match.stats.numDeaths}} Deaths </li>
-				 	<li>{{match.stats.assists}} Assists </li>
+			<div>
+				<img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/{{ champions[match.championId]}}.png" />
+				<ul id="gameType">
+					<li>{{match.subType}}</li>
+					<li>{{match.lane}}</li>
 				</ul>
-
-
-				 <ul id="goldEarned">
-					 <li>{{match.stats.goldEarned}} Gold</li>
-					 <li>{{match.stats.minionsKilled}} CS</li>
-				 </ul>
-			 </div>
-
-
 			</div>
+			<div id ="itemList">
+				<ul id="itemList1">
+					<li>
+						<img height="34" width="34" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item0}}.png" />
+						<img height="34" width="34" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item1}}.png" />
+						<img height="34" width="34" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item2}}.png" />
+					</li>
+				</ul>
+				<ul id="itemlist2">
+					<li>
+						<img height="34" width="34" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item3}}.png" />
+						<img height="34" width="34" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item4}}.png" />
+						<img height="34" width="34" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item5}}.png" />
+						<img height="34" width="34" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/item/{{match.stats.item6}}.png" />
+					</li>
+				</ul>
+			</div>
+			<div>
+				<ul id="summonerGame">
+					<li>{{match.stats.championsKilled}} Kills </li>
+					<li>{{match.stats.numDeaths}} Deaths </li>
+					<li>{{match.stats.assists}} Assists </li>
+				</ul>
+				<ul id="goldEarned">
+					<li>{{match.stats.goldEarned}} Gold</li>
+					<li>{{match.stats.minionsKilled}} CS</li>
+				</ul>
+			</div>
+			</div>
+
+
+		</div>
 
 	</form>
 </div>

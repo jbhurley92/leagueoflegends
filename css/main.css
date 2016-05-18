@@ -1,52 +1,77 @@
 #information{
-	background-color: CCFFFF;
-	border: groove;
-	width:100%;
-	height: 230px;
-	}
-
+    position: relative;
+}
 #summonerBox{
-	width: : 100px;
-	background-color: ;
-
+    width: 100px;
+    background-color: ;
 }
+
 #summonerInput{
-	width:200px;
-	height: 20px;
-	background-color: white;
+    width: 200px;
+    height: 20px;
+    background-color: white;
 }
+
 .winBg{
-	background-color: green;
+    background-color: green;
+		opacity: 0.8;
+
+		border: groove 3px;
 }
+
 .loseBg{
-  background-color: red;
+    background-color: red;
+		opacity: 0.8;
+    border: groove 3px;
 }
+
 #itemList1{
- margin-left: 100px;
- list-style-type: none;
- position: absolute;
- top: 0;
- left: 0;
-
-
+    margin-left: 100px;
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+
 #itemlist2{
-display: inline-block;
-	margin-left: 300px;
-	list-style-type: none;
-
+    margin-left: 100px;
+    list-style-type: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
 }
-#goldEarbed{
-	list-style-type: none;
 
-
+#goldEarned{
+    list-style-type: none;
+		position: absolute;;
+		top: 0px;
+		left: 390px;
 }
+
 #gameType{
-	list-style-type: none;
+    list-style-type: none;
+}
 
+#summonerGame{
+    list-style-type: none;
+		position: absolute;;
+		top: 0px;
+		left: 285px;
 
 }
-#summonerGame{
-	list-style-type: none;
+body{
+    background-image: url(../pics/cloud9.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+		background-attachment: fixed;
+}
+h1{
+	font-size: 700%;
+	font-style: oblique;
 
+}
+
+a {
+	color: black;
+	text-decoration: none;
 }
